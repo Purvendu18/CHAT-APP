@@ -1,6 +1,6 @@
 import useConversation from "../statemanage/useConversation";
 import axios from "axios";
-
+import { useState } from "react";
 
 const useSendMessage = () => {
   const [loading, setLoading] = useState(false);
@@ -12,7 +12,7 @@ const useSendMessage = () => {
         `/api/message/send/${selectedConversation._id}`,
         { message }
       );
-      setMessage([...messages, res.data]);
+      // setMessage([...messages, res.data]);
       setLoading(false);
     } catch (error) {
       console.log("Error in send messages", error);

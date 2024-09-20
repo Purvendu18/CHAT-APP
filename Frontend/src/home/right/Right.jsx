@@ -15,7 +15,10 @@ function Right() {
     <div className="w-full bg-slate-900 text-gray-300">
       <div>
         {!selectedConversation ? (
-          <NoChatSelected />
+          <>
+
+           <NoChatSelected />
+          </>
         ) : (
           <>
             <Chatuser />
@@ -36,8 +39,8 @@ function Right() {
 export default Right;
 
 const NoChatSelected = () => {
-  const [authUser] = useAuth();
-  console.log(authUser);
+  // const [authUser] = useAuth();
+  // console.log(useAuth());
   return (
     <>
       <div className="relative">
@@ -45,13 +48,14 @@ const NoChatSelected = () => {
           htmlFor="my-drawer-2"
           className="btn btn-ghost drawer-button lg:hidden absolute left-5"
         >
-          <CiMenuFries className="text-white text-xl" />
+          {/* <CiMenuFries className="text-white text-xl" /> */}
         </label>
         <div className="flex h-screen items-center justify-center">
           <h1 className="text-center">
             Welcome{" "}
             <span className="font-semibold text-xl">
-              {authUser.user.fullname}
+              {/* {authUser.user.fullname} */}
+            
             </span>
             <br />
             No chat selected, please start conversation by selecting anyone to

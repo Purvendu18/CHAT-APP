@@ -29,7 +29,7 @@ function App() {
               <Right></Right> */}
               <Logout/>
               <Left/>
-              {/* <Right/> */}
+              <Right/>
 
 
 <div className="drawer">
