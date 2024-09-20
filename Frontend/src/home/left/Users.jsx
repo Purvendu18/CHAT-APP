@@ -1,12 +1,14 @@
 import useGetAllUsers from '../../context/useGetAllUsers.jsx';
-import Demo from './Demo.jsx';
 import User from './user.jsx';
 function Users() {
   const [allUsers, loading] = useGetAllUsers();
 
+  
+
   // console.log('all user',allUsers.filteredUsers[0]);
   // console.log(loading)
-  // console.log('this is ',allUsers.filteredUsers[0])
+  // console.log('this is ',typeof(allUsers.filteredUsers[0]))
+  // console.log(allUsers.filteredUsers.length)
 
   return (
     <div >
@@ -15,8 +17,8 @@ function Users() {
         style={{ maxHeight: "calc(84vh - 10vh)" }}
       > 
       
-        {  allUsers.length && allUsers.filteredUsers.map((user, index) => 
-        <Demo key={index} user={user}/>
+        { allUsers.filteredUsers &&  allUsers.filteredUsers.length && allUsers.filteredUsers.map((user, index) => 
+        <User key={index} user={user}/>
           )}
       </div>
     </div>
